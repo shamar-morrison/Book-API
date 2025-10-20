@@ -72,7 +72,7 @@ Create a `.env` file in the root directory with the following variables:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/book-api
+MONGODB_URI=YOUR_DB_CONNECTION_STRING
 ```
 
 ## Usage
