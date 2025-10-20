@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "format": "prettier --write .",
@@ -31,6 +31,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.16",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
