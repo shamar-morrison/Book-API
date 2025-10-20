@@ -31,6 +31,22 @@ app.get("/api/v1/books", async (_, res: Response) => {
   }
 });
 
+// Update a book
+app.put("/api/v1/books/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const updatedBook = await Book.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    res
+      .status(200)
+      .json({ message: "Book updated successfully", data: updatedBook });
+  } catch (error: any) {
+    return res.status(400).json({ message: error.message });
+  }
+});
+
 // Get a single book
 app.get("/api/v1/books/:id", async (req, res) => {
   const { id } = req.params;
