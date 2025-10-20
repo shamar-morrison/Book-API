@@ -1,6 +1,5 @@
-# Book API
+<img width="1200" height="630" alt="book" src="https://github.com/user-attachments/assets/2baadf51-478d-4df2-9bea-ac9a0e46d1f6" />
 
-A RESTful API for managing books built with Node.js, Express, TypeScript, and MongoDB.
 
 ## Features
 
