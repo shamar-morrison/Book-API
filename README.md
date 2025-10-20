@@ -70,8 +70,18 @@ cp .env.example .env
 Create a `.env` file in the root directory with the following variables:
 
 ```env
+# Server Configuration
 PORT=5000
-MONGODB_URI=YOUR_DB_CONNECTION_STRING
+
+# Database Configuration
+# For MongoDB Atlas (cloud):
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/book-api?retryWrites=true&w=majority
+
+# For MongoDB with authentication:
+# MONGODB_URI=mongodb://username:password@localhost:27017/book-api
+
+# For MongoDB with custom port:
+# MONGODB_URI=mongodb://localhost:27017/book-api
 ```
 
 ## Usage
