@@ -201,14 +201,6 @@ Book-API/
 └── .env.example         # Environment variables template
 ```
 
-## License
-
-This project is licensed under the ISC License.
-
-## Author
-
-**Shamar Morrison**
-
 ## Error Handling
 
 The API includes comprehensive error handling for:
