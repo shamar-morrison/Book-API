@@ -32,20 +32,15 @@ app.get("/api/v1/books", async (_, res: Response) => {
 });
 
 // Get a single book
-app.get(
-  "/api/v1/books/:id",
-  async (req: Request<{ id: string }>, res: Response) => {
-    const { id } = req.params;
-    try {
-      const book = await Book.findById(id);
-      res
-        .status(200)
-        .json({ message: "Book fetched successfully", data: book });
-    } catch (error: any) {
-      return res.status(400).json({ message: error.message });
-    }
-  },
-);
+app.get("/api/v1/books/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const book = await Book.findById(id);
+    res.status(200).json({ message: "Book fetched successfully", data: book });
+  } catch (error: any) {
+    return res.status(400).json({ message: error.message });
+  }
+});
 
 // Create a new book
 app.post(
